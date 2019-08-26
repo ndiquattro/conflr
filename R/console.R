@@ -31,7 +31,7 @@ confl_console_upload <- function(md_file, .title, tags, space_key, type,
     blank_page <- confl_post_page(
       type = type,
       spaceKey = space_key,
-      title = title,
+      title = .title,
       body = "",
       ancestors = parent_id
     )
@@ -74,7 +74,7 @@ confl_console_upload <- function(md_file, .title, tags, space_key, type,
   image_size_default <- if (!use_original_size) 600 else NULL
   result <- confl_update_page(
     id = id,
-    title = title,
+    title = .title,
     body = html_text,
     image_size_default = image_size_default
   )

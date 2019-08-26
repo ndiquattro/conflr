@@ -8,7 +8,7 @@
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
 # A PARTICULAR PURPOSE. See <http://www.gnu.org/licenses/> for more details.
 
-confl_console_upload <- function(md_file, title, tags, space_key, type,
+confl_console_upload <- function(md_file, .title, tags, space_key, type,
                                  parent_id, update = FALSE, use_original_size) {
 
   # conflr doesn't insert a title in the content automatically
@@ -25,7 +25,7 @@ confl_console_upload <- function(md_file, title, tags, space_key, type,
 
   # Extracted Shiny Code
   # check if there is an existing page
-  existing_pages <- confl_list_pages(title = title, spaceKey = space_key)
+  existing_pages <- confl_list_pages(title = .title, spaceKey = space_key)
   if (existing_pages$size == 0) {
     # if the page doesn't exist, create a blank page
     blank_page <- confl_post_page(

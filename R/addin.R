@@ -73,7 +73,7 @@ confl_create_post_from_Rmd <- function(Rmd_file = NULL, interactive = interactiv
   } else {
     confl_console_upload(
       md_file = md_file,
-      title = front_matter$title,
+      .title = front_matter$title,
       tags = front_matter$tags,
       ...
     )
